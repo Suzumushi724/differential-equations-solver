@@ -36,15 +36,17 @@ def main():
     T = np.arange(t,N*h,h)
     ans = answer(T)
     
-    print("Euler method:"+str(np.var(result1[:,0]-ans))+"\r\n"
-         +"Fixed-Euler method:"+str(np.var(result2[:,0]-ans))+"\r\n"
-         +"Runge–Kutta method:"+str(np.var(result3[:,0]-ans)))
+    print('Euler method:'+str(np.var(result1[:,0]-ans))+'\r\n'
+         +'Fixed-Euler method:'+str(np.var(result2[:,0]-ans))+'\r\n'
+         +'Runge–Kutta method:'+str(np.var(result3[:,0]-ans)))
     
     fig,ax = plt.subplots()
-    ax.plot(T,result1[:,0],marker='v',markevery=30,label="euler")
-    ax.plot(T,result2[:,0],marker='^',markevery=30,label="fixed_euler")
-    ax.plot(T,result3[:,0],marker='x',markevery=30,label="runge")
-    ax.plot(T,ans,marker='o',markevery=30,label="answer")
+    ax.plot(T,result1[:,0],marker='v',markevery=30,label='Euler')
+    ax.plot(T,result2[:,0],marker='^',markevery=30,label='Fixed_Euler')
+    ax.plot(T,result3[:,0],marker='x',markevery=30,label='Runge-Kutta')
+    ax.plot(T,ans,marker='o',markevery=30,label='Answer')
+    plt.xlabel('t')
+    plt.ylabel('x')
     plt.legend()
     plt.show()
 
