@@ -8,10 +8,7 @@ def dxdt(t,x):
     w = np.sqrt(k/m)
     w0 = w 
     f = 1 
-    ret = np.array([])
-    ret = np.append(ret,x[1])
-    ret = np.append(ret,-1*w**2 * x[0] + f/m*np.cos(w0*t))
-    return ret
+    return np.array([x[1],-1*w**2 * x[0] + f/m*np.cos(w0*t)])
 
 def answer(t):
     k = 1 
