@@ -1,5 +1,9 @@
 # differential-equations-solverへようこそ
 
+## Characteristic
+1. ndarrayを多用することで演算の高速化とシンプルさを実現した。
+2. モジュール化してしまうことで演算方法ごとの比較検討がしやすくなった。また、新たな演算方法の追加・削除もしやすくなった。
+
 ## Getting started
 1. DiffEquSolverをdiffeq_solver.pyからインポートする。
 ```Python
@@ -23,4 +27,4 @@ result1 = solver.euler() #オイラー法
 result2 = solver.fixed_euler() #改良オイラー法
 result3 = solver.runge() #ルンゲ＝クッタ法
 ```
-返り値はndarray。
+返り値はすべてndarrayである。その列の順番は初期条件を入力した順番に一致している。
